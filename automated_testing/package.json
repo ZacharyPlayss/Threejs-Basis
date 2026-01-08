@@ -1,4 +1,6 @@
 {
+  "name": "threejs-basis-tests",
+  "type": "module",
   "devDependencies": {
     "@types/jsdom": "^27.0.0",
     "@types/node": "^25.0.3",

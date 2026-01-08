@@ -9,9 +9,7 @@ export default defineConfig({
     },
     test: {
         globals: true,
-
         environment: 'jsdom',
-
         alias: {
             '@scripts': path.resolve(__dirname, '../scripts')
         },
