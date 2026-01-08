@@ -1,2 +1,3 @@
 # Webstorm Specific folders
 .idea/
+/automated_testing/*
