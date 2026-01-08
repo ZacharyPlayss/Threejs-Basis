@@ -16,7 +16,7 @@
     "test-ui": "vitest --ui"
   },
   "dependencies": {
-    "lil-gui": "^0.18.0",
-    "three": "^0.172.0"
+    "lil-gui": "^0.21.0",
+    "three": "^0.182.0"
   }
 }
