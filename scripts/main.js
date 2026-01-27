@@ -11,10 +11,13 @@ const gui= new GUI();
 
 // FUNCTIONS
 function handleWindowResize() {
-    const { clientWidth, clientHeight } = canvas;
-    camera.aspect = clientWidth / clientHeight;
+    const container = canvas.parentElement;
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+    camera.aspect = width / height;
     camera.updateProjectionMatrix();
-    renderer.setSize(clientWidth, clientHeight);
+    renderer.setSize(width, height);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 }
 
 
@@ -59,6 +62,7 @@ camera.position.z = 5;
 // RENDERER
 const renderer = new THREE.WebGLRenderer({ canvas });
 renderer.antialias = true;
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 renderer.setSize(canvas.clientWidth, canvas.clientHeight);
 
 // LIGHT SETUP
