@@ -5,9 +5,7 @@ import {OrbitControls} from'three/addons/controls/OrbitControls.js'
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import GUI from 'lil-gui';
 import {createPositionSliders, createRotationSliders, createScaleSliders,createAllTransformSliders} from 'lil-gui-helper'
-
 const gui= new GUI();
-
 
 // FUNCTIONS
 function handleWindowResize() {
@@ -19,7 +17,6 @@ function handleWindowResize() {
     renderer.setSize(width, height);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 }
-
 
 function configureDracoLoader(gltfLoader) {
     if (!(gltfLoader instanceof GLTFLoader)) {

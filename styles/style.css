@@ -1,53 +1,54 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-}
-nav {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-nav a {
-    text-decoration: none;
-    color: #fff;
-    padding: 10px 20px;
-    margin: 0 5px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-nav a:hover {
-    background-color: #555;
-}
-section {
-    height: 90svh;
-    width: 100%;
+    margin: 0;
     display: flex;
-    gap: 4%;
-    padding:1%;
-    box-sizing: border-box;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
 }
-section > article {
-    flex: 1;
-    height: 100%;
-    min-width: 0;
+/* Nav */
+nav {
+    padding: 0.5rem;
+    background: #66a9ec;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-shrink: 0;
 }
-#threejs-canvas{
+nav > a {
+    text-decoration: none;
+    color: #1E1E1D;
+    margin-top: 0.5rem;
+}
+/* Main Section */
+section {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 0;
+}
+/* Text Article */
+#text-article-1 {
+    padding: 0.5rem;
+    flex-shrink: 0;
+}
+#text-article-1 > h2 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+}
+#text-article-1 > p {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+/* Canvas Container */
+.canvas-container {
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+}
+#threejs-canvas {
+    display: block;
     width: 100%;
     height: 100%;
-    display: block;
-}
-.textArticle{
-    flex-direction:column;
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-}
-h2{
-    font-size:2.5rem;
-}
-p{
-    font-size:1.5rem;
 }
